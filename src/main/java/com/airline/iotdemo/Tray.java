@@ -23,9 +23,13 @@ public class Tray implements java.io.Serializable {
 	@org.kie.api.definition.type.Description("A collection of food items in the tray.")
 	private java.util.List<com.airline.iotdemo.Food> foods;
 
-	@org.kie.api.definition.type.Description(value = "Tray ID")
-	@org.kie.api.definition.type.Label(value = "ID")
+	@org.kie.api.definition.type.Description("Tray ID")
+	@org.kie.api.definition.type.Label("ID")
 	private java.lang.String id;
+
+	@org.kie.api.definition.type.Description(value = "Food status code.")
+	@org.kie.api.definition.type.Label(value = "Food Status")
+	private java.lang.Integer foodStatus;
 
 	public Tray() {
 	}
@@ -70,14 +74,24 @@ public class Tray implements java.io.Serializable {
 		this.id = id;
 	}
 
+	public java.lang.Integer getFoodStatus() {
+		return this.foodStatus;
+	}
+
+	public void setFoodStatus(java.lang.Integer foodStatus) {
+		this.foodStatus = foodStatus;
+	}
+
 	public Tray(java.lang.String type, java.util.Date preparedDate,
 			java.util.Date spoilageDate,
-			java.util.List<com.airline.iotdemo.Food> foods, java.lang.String id) {
+			java.util.List<com.airline.iotdemo.Food> foods,
+			java.lang.String id, java.lang.Integer foodStatus) {
 		this.type = type;
 		this.preparedDate = preparedDate;
 		this.spoilageDate = spoilageDate;
 		this.foods = foods;
 		this.id = id;
+		this.foodStatus = foodStatus;
 	}
 
 }

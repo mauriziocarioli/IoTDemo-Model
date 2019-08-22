@@ -19,10 +19,10 @@ public class Cart implements java.io.Serializable {
 	private java.lang.String type;
 
 	@org.kie.api.definition.type.Label("Latitude")
-	private java.lang.String latitude;
+	private Double latitude;
 
 	@org.kie.api.definition.type.Label("Longitude")
-	private java.lang.String longitude;
+	private Double longitude;
 
 	@org.kie.api.definition.type.Label("Temperature")
 	private java.lang.Double temperature;
@@ -50,22 +50,6 @@ public class Cart implements java.io.Serializable {
 		this.type = type;
 	}
 
-	public java.lang.String getLatitude() {
-		return this.latitude;
-	}
-
-	public void setLatitude(java.lang.String latitude) {
-		this.latitude = latitude;
-	}
-
-	public java.lang.String getLongitude() {
-		return this.longitude;
-	}
-
-	public void setLongitude(java.lang.String longitude) {
-		this.longitude = longitude;
-	}
-
 	public java.lang.Double getTemperature() {
 		return this.temperature;
 	}
@@ -82,9 +66,25 @@ public class Cart implements java.io.Serializable {
 		this.id = id;
 	}
 
+	public java.lang.Double getLatitude() {
+		return this.latitude;
+	}
+
+	public void setLatitude(java.lang.Double latitude) {
+		this.latitude = latitude;
+	}
+
+	public java.lang.Double getLongitude() {
+		return this.longitude;
+	}
+
+	public void setLongitude(java.lang.Double longitude) {
+		this.longitude = longitude;
+	}
+
 	public Cart(java.util.List<com.airline.iotdemo.Tray> trays,
-			java.lang.String type, java.lang.String latitude,
-			java.lang.String longitude, java.lang.Double temperature,
+			java.lang.String type, java.lang.Double latitude,
+			java.lang.Double longitude, java.lang.Double temperature,
 			java.lang.String id) {
 		this.trays = trays;
 		this.type = type;
