@@ -40,10 +40,6 @@ public class Cart implements Serializable {
 	@Description("Food Container RFID")
 	private String foodId;
 
-	@Label("STATUS")
-	@Description("Cart Status")
-	private Integer status;
-
 	@Description("Truck Activity")
 	@Label("ACTIVITY")
 	private String activity;
@@ -101,14 +97,6 @@ public class Cart implements Serializable {
 		this.foodId = foodId;
 	}
 
-	public Integer getStatus() {
-		return this.status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
 	public String getActivity() {
 		return this.activity;
 	}
@@ -136,7 +124,6 @@ public class Cart implements Serializable {
 		this.longitude = longitude;
 		this.temperature = temperature;
 		this.foodId = foodId;
-		this.status = status;
 		this.activity = activity;
 		this.alerts = alerts;
 	}
