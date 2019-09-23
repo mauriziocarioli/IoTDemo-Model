@@ -1,0 +1,48 @@
+=IoT Demo
+[.line-through]####
+
+[source,JSON]
+----
+{
+    "commands": [
+        {
+            "insert": {
+                "object": {
+                    "com.airline.iotdemo.Cart": {
+                        "id": "abcdefg",
+                        "timestamp": 12345678,
+                        "longitude": 41.97,
+                        "latitude": -87.9,
+                        "temperature": 30,
+                        "foodId": "XYZ",
+                        "alerts": []
+                    }
+                },
+                "out-identifier": "foodTruck",
+                "return-object": true
+            }
+        },
+        {
+            "insert": {
+                "object": {
+                    "com.airline.iotdemo.Food": {
+                        "rfid": "XYZ",
+                        "type": "1",
+                        "status": 2
+                    }
+                },
+                 "out-identifier": "foodContainer",
+               "return-object": true
+            }
+        },
+        {
+            "fire-all-rules": {
+                "out-identifier": "firedActivations"
+            }
+        },
+        {
+            "dispose": {}
+        }
+    ]
+}
+----
