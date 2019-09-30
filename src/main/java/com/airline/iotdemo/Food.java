@@ -66,7 +66,7 @@ public class Food implements Serializable {
 		this.status = status;
 	}
 
-	public Food(String type, String rfid, String name, String status) {
+	public Food(String type, String rfid, String name, Integer status) {
 		this.type = type;
 		this.rfid = rfid;
 		this.name = name;
