@@ -46,6 +46,9 @@ public class Cart implements Serializable {
 
 	@Label(value = "ALERT_DETAILS")
 	private List<Alert> alerts;
+	
+	@Label(value = "RULESTRIGGERED")
+	private String rulesFired;
 
 	public Cart() {
 	}
@@ -112,12 +115,20 @@ public class Cart implements Serializable {
 	public void setAlerts(List<Alert> alerts) {
 		this.alerts = alerts;
 	}
+	
+	public String getRulesFired() {
+	    return this.rulesFired;
+	}
+	
+	public void setRulesFired(String rulesFired) {
+	    this.rulesFired = rulesFired;
+	}
 
 	public Cart(String id, Long timestamp,
 			Double latitude, Double longitude,
 			Double temperature, String foodId,
 			Integer status, String activity,
-			List<Alert> alerts) {
+			List<Alert> alerts, String rulesFired) {
 		this.id = id;
 		this.timestamp = timestamp;
 		this.latitude = latitude;
